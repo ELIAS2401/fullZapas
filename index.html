@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Zapas – Tu Tienda de Zapatillas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <div class="logo-icon">👟</div>
+        <span class="brand-text"><span class="brand-full">FULL</span> <span class="brand-zapas">ZAPAS</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="hamburger-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6 hero-text">
+          <div class="hero-badge">🔥 Nueva colección 2025</div>
+          <h1 class="hero-title">
+            LAS MEJORES<br />
+            <span class="hero-title-accent">ZAPATILLAS</span><br />
+            TE ESPERAN
+          </h1>
+          <p class="hero-desc">Enviamos a todo el país. Calidad garantizada, precios reales, atención personalizada. Tu próximo par está acá.</p>
+          <div class="hero-trust d-flex gap-4 flex-wrap">
+            <div class="trust-item"><i class="fas fa-shield-alt"></i> Compra segura</div>
+            <div class="trust-item"><i class="fas fa-truck"></i> Envíos a todo el país</div>
+            <div class="trust-item"><i class="fab fa-whatsapp"></i> Atención directa</div>
+          </div>
+          <a href="#productos" class="btn-hero">Ver productos <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="col-lg-6 hero-visual d-none d-lg-flex">
+          <div class="hero-shoe-display">
+            <div class="shoe-ring ring-1"></div>
+            <div class="shoe-ring ring-2"></div>
+            <div class="shoe-ring ring-3"></div>
+            <div class="shoe-emoji">👟</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scrolleá</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS / FILTROS -->
+  <section id="productos" class="productos-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">NUESTROS <span class="text-purple">PRODUCTOS</span></h2>
+        <p class="section-sub">Encontrá lo que buscás con nuestros filtros</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros-wrapper">
+        <div class="filtros-scroll">
+          <button class="filtro-btn active" data-filtro="todos">🏷️ Todos</button>
+          <button class="filtro-btn" data-filtro="botines">⚽ Botines</button>
+          <button class="filtro-btn" data-filtro="hombre">👨 Hombre</button>
+          <button class="filtro-btn" data-filtro="mujer">👩 Mujer</button>
+          <button class="filtro-btn" data-filtro="ninos">👦 Niños</button>
+          <button class="filtro-btn" data-filtro="ropa" disabled title="Próximamente">👕 Ropa <span class="badge-soon">Pronto</span></button>
+        </div>
+      </div>
+
+      <!-- Grid Productos -->
+      <div class="row g-4" id="productosGrid">
+        <!-- Productos se renderizan por JS -->
+      </div>
+
+      <div class="text-center mt-5" id="noResults" style="display:none;">
+        <p class="no-results-text">No hay productos en esta categoría todavía.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIENES SOMOS -->
+  <section id="nosotros" class="nosotros-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="nosotros-visual">
+            <div class="nosotros-badge">EST. 2024</div>
+            <div class="nosotros-shoe">👟</div>
+            <div class="nosotros-stats">
+              <div class="stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-label">Clientes felices</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Original</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="nosotros-content">
+            <span class="section-tag">QUIÉNES SOMOS</span>
+            <h2 class="nosotros-title">Más que una tienda,<br /><span class="text-purple">una comunidad</span></h2>
+            <p class="nosotros-text">
+              En <strong>Full Zapas</strong> somos apasionados del calzado. Nacimos con la misión de acercar las mejores zapatillas y botines a precios justos, con atención directa y sin intermediarios.
+            </p>
+            <p class="nosotros-text">
+              Cada par que vendemos pasa por nuestro control de calidad. Trabajamos con marcas reconocidas y nos aseguramos de que lo que recibís sea exactamente lo que esperás.
+            </p>
+            <div class="nosotros-puntos">
+              <div class="punto"><i class="fas fa-check-circle"></i> Productos 100% originales</div>
+              <div class="punto"><i class="fas fa-check-circle"></i> Atención personalizada por WhatsApp</div>
+              <div class="punto"><i class="fas fa-check-circle"></i> Envíos a todo el país</div>
+              <div class="punto"><i class="fas fa-check-circle"></i> Cambios y devoluciones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">¿TENÉS <span class="text-purple">DUDAS?</span></h2>
+        <p class="section-sub">Escribinos y te respondemos al toque</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="contacto-card">
+            <div class="contacto-icon"><i class="fab fa-whatsapp"></i></div>
+            <h5>WhatsApp</h5>
+            <p>La forma más rápida de hablar con nosotros</p>
+            <a href="https://wa.me/541164681220?text=Hola%20Full%20Zapas%2C%20quiero%20consultar%20sobre%20sus%20productos" target="_blank" class="btn-contacto">Escribinos ahora</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contacto-card">
+            <div class="contacto-icon"><i class="fab fa-instagram"></i></div>
+            <h5>Instagram</h5>
+            <p>Seguinos para ver novedades y lanzamientos</p>
+            <a href="#" class="btn-contacto">@fullzapas</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contacto-card">
+            <div class="contacto-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h5>Ubicación</h5>
+            <p>Argentina – Envíos a todo el país</p>
+            <span class="btn-contacto-static">Buenos Aires, ARG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <div class="footer-brand">
+            <span class="brand-full">FULL</span> <span class="brand-zapas">ZAPAS</span>
+          </div>
+          <p class="footer-desc">Tu tienda de zapatillas de confianza.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="footer-links">
+            <a href="#home">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-end">
+          <div class="footer-social">
+            <a href="https://wa.me/541164681220" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom text-center">
+        <p>© 2025 Full Zapas · Desarrollada por <span class="dev-name">Elias</span> 💜</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PRODUCTO -->
+  <div class="modal fade" id="productoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-dark">
+        <button type="button" class="modal-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="modal-img-wrapper">
+              <img id="modalImgPrincipal" src="" alt="" class="modal-img-main" />
+              <div class="modal-thumbs" id="modalThumbs"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="modal-body-custom">
+              <div class="modal-categoria" id="modalCategoria"></div>
+              <h3 class="modal-titulo" id="modalTitulo"></h3>
+              <p class="modal-descripcion" id="modalDescripcion"></p>
+              <div class="modal-precio-wrap">
+                <span class="modal-precio" id="modalPrecio"></span>
+              </div>
+              <div class="modal-talles-section">
+                <p class="talles-label">Talle (EUR):</p>
+                <div class="talles-grid" id="modalTalles"></div>
+              </div>
+              <div class="modal-info-extra" id="modalInfoExtra"></div>
+              <button class="btn-pedir-modal" id="btnPedirModal">
+                <i class="fab fa-whatsapp"></i> Hacer pedido
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toastMsg" class="toast" role="alert">
+      <div class="toast-body">
+        <i class="fab fa-whatsapp me-2"></i> Redirigiendo a WhatsApp...
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="productos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
