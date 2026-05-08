@@ -79,8 +79,8 @@ function rowToProducto(row, index) {
   }));
 
   const imagenes = [row.imagen_1, row.imagen_2, row.imagen_3]
-  .filter(Boolean)
-  .map(url => url.trim());
+    .filter(Boolean)
+    .map(url => url.trim());
 
   // Placeholder si no hay imágenes cargadas
   if (imagenes.length === 0) {
@@ -141,7 +141,8 @@ async function cargarProductosDesdeSheets() {
       throw new Error("Sheet vacío o sin datos");
     }
 
-    PRODUCTOS = rows.map(rowToProducto);
+    PRODUCTOS = rows.map(rowToProducto)
+      .filter(p => p.talles.some(t => !t.agotado)); // ← solo con stock
 
     renderProductos("todos");
 

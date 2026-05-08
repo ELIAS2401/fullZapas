@@ -112,17 +112,31 @@ function abrirModal(id) {
   // Thumbnails
   const thumbsEl = document.getElementById("modalThumbs");
   thumbsEl.innerHTML = "";
-  if (p.imagenes.length > 1) {
+
+  // Si hay solo una imagen, ocultar thumbnails
+  if (p.imagenes.length <= 1) {
+    thumbsEl.style.display = "none";
+  } else {
+
+    thumbsEl.style.display = "flex";
+
     p.imagenes.forEach((src, i) => {
       const img = document.createElement("img");
+
       img.src = src;
       img.alt = p.titulo;
       img.className = `modal-thumb ${i === 0 ? "active" : ""}`;
+
       img.addEventListener("click", () => {
         imgPrincipal.src = src;
-        document.querySelectorAll(".modal-thumb").forEach(t => t.classList.remove("active"));
+
+        document.querySelectorAll(".modal-thumb").forEach(t => {
+          t.classList.remove("active");
+        });
+
         img.classList.add("active");
       });
+
       thumbsEl.appendChild(img);
     });
   }
@@ -180,7 +194,7 @@ function enviarWhatsApp() {
     tallesSection.style.animation = "none";
     tallesSection.offsetHeight; // reflow
     tallesSection.style.animation = "shake 0.4s ease";
-    
+
     // Agregar estilos de shake si no existen
     if (!document.getElementById("shakeStyle")) {
       const style = document.createElement("style");
