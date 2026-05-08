@@ -240,4 +240,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── INIT ── */
-renderProductos("todos");
+cargarProductosDesdeSheets();
