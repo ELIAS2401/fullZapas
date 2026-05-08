@@ -103,7 +103,7 @@ function rowToProducto(row, index) {
     infoExtra: {
       material: row.material || null,
       suela: row.suela || null,
-      sistema_talle: row.sistema_talle || "EUR",
+      sistema_talle: row.sistema_talle || "ARG",
     },
   };
 }
